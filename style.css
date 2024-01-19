@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: #8A2BE2; 
+}
+
+nav {
+  height: 80px;
+  background: #8FBC8F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 1300px) / 2);
+}
+
+.logo {
+  color: #fff; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff; 
+  padding: 0 1.5rem;
+}
+
+nav a:hover {
+  color: #000; 
+}
+
+.hero {
+  background: #8A2BE2; 
+  color: #fff; 
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 95vh;
+  padding: 3rem calc((100vw - 1300px) / 2);
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
+  padding: 0rem 2rem;
+}
+
+.column-right h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.column-right p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+button {
+  margin-bottom: 1rem; 
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  border: none;
+  color: #8A2BE2; 
+  background: #fff; 
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+button:hover {
+  background: #000; 
+  color: #fff; 
+}
+
+.column-left {
+  position: absolute;
+  top: 1;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  padding: 8rem; 
+}
+
+.hero-image {
+  max-width: 100%; 
+  max-height: 200px;
+  margin-right: 300px;
+  margin-top: -100px;
+}
+
+.dancing-guitar {
+  position: fixed;
+  bottom: 250px;
+  left: 650px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: url('./dancing-guitar.gif') no-repeat;
+  background-size: cover;
+  animation: dance 2s infinite alternate;
+}
+
+@keyframes dance {
+  0% {
+    transform: translateX(-50%) rotate(10deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(-10deg);
+  }
+}
